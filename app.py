@@ -10,12 +10,19 @@ if "experiment_no" not in st.session_state:
 if "df_exp_res" not in st.session_state:
     st.session_state["df_exp_res"] = pd.DataFrame(columns = ["no","iteraciones","media"])
 
+st.markdown("""
+<style>
+.header{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Avenir';
+    color: #E3E3E3;
+    font-weight: bold;
+    padding-bottom: 50px;
+</style>
+<div class="header">Lanzar una moneda</div>
+    """, unsafe_allow_html=True)
 
-    
-
-
-
-st.header('Lanzar una moneda')
 
 chart = st.line_chart([0.5])
 
